@@ -1,56 +1,93 @@
-main {
-    display: flex;
-    flex-direction: column;
-   
-    align-items: center;
-    height: 100vh; /* Establecer la altura al 100% de la ventana */
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
-/* Estilo básico para la barra de navegación */
-nav {
-    background-color: #170c93; /* Color de fondo de la barra de navegación */
-    height: 10%;
-    border-radius: 15px;
-    font-size: 1.2em;
-    justify-content: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-/* Estilo para la lista no ordenada */
-nav ul {
-    list-style-type: none;
-    padding: 10px 5px 10px 5px;
-    margin: 0;
-    text-align: right; /* Alinea el texto a la derecha */
+body main form {
+  align-items: center;
+  background-color: #c1e6f0;
+  border: 1px solid #170c93;
+  border-radius: 15px;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Estilo para los elementos de la lista */
-nav li {
-    display: inline; /* Para que los elementos se muestren en línea */
-    margin-right: 20px; /* Espacio entre elementos */
+body main form input {
+  display: block;
+  /* Coloca cada campo de entrada en una línea nueva */
+  margin: 10px auto;
+  /* Espaciado entre campos y centrado horizontalmente */
 }
-
-/* Estilo para los enlaces */
-nav a {
-    text-decoration: none; /* Sin subrayado */
-    color: #fff; /* Color de texto */
-    font-weight: bold; /* Negrita */
+body main form button {
+  display: block;
+  margin: 0 auto;
+  background-color: #170c93;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 10px;
 }
-
-/* Estilo para los enlaces al pasar el ratón por encima */
-nav a:hover {
-    color: #c1e6f0; /* Cambiar el color al pasar el ratón */
+body main #buttons {
+  background-color: #c1e6f0 !important;
+  border-radius: 15px;
+  color: #000;
+  border-color: #170c93;
 }
-
-.alert {
-    background-color: #170c93; /* Color de fondo de la alerta */
-    border-radius: 15px;
-    color: #fff; /* Color de texto */
-    font-size: 1.2em;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 10px 5px 10px 5px;
-    margin: 0;
-    text-align: center; /* Alinea el texto al centro */
-    width: 100%;
-    justify-content: center;
+body main #buttons button {
+  background-color: #170c93;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 10px 5px 10px 5px;
 }
+body .alert {
+  background-color: #170c93;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 20px;
+  margin: 1% 0% 1% 3%;
+  text-align: center;
+  width: 90%;
+  justify-content: center;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+body nav {
+  background-color: #170c93;
+  border-radius: 15px;
+  font-size: 1.2em;
+  padding: 10px 10px 10px 10px;
+  margin: 1% 0% 1% 4%;
+  text-align: center;
+  justify-content: center;
+  width: 90%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+body nav ul {
+  list-style-type: none;
+  padding: 10px 5px 10px 5px;
+  margin: 0;
+  text-align: right;
+}
+body nav li {
+  display: inline;
+  /* Para que los elementos se muestren en línea */
+  margin-right: 20px;
+  /* Espacio entre elementos */
+}
+body nav a {
+  text-decoration: none;
+  /* Sin subrayado */
+  color: #fff;
+  /* Color de texto */
+  font-weight: bold;
+  /* Negrita */
+}
+body nav a:hover {
+  color: #c1e6f0;
+  /* Cambiar el color al pasar el ratón */
+}/*# sourceMappingURL=style.css.map */
