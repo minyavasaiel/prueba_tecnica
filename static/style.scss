@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+
+        }
+
+        form {
+            align-items: center;
+            background-color: #c1e6f0;
+            border: 1px solid #170c93;
+            border-radius: 15px;
+            padding: 20px 20px 20px 20px;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+
+            input {
+                display: block;
+                /* Coloca cada campo de entrada en una línea nueva */
+                margin: 10px auto;
+                /* Espaciado entre campos y centrado horizontalmente */
+            }
+
+            button {
+                display: block;
+                margin: 0 auto;
+                background-color: #170c93;
+                border-radius: 15px;
+                color: #fff;
+                font-size: 1.2em;
+                padding: 10px;
+               
+            }
+        }
+
+        #buttons {
+            background-color: #c1e6f0 !important;
+            border-radius: 15px;
+            color: #000;
+            border-color: #170c93;
+
+            button {
+                background-color: #170c93;
+                border-radius: 15px;
+                color: #fff;
+                font-size: 1.2em;
+                padding: 10px 5px 10px 5px;
+            }
+        }
+    }
+
+    .alert {
+        background-color: #170c93;
+        border-radius: 15px;
+        color: #fff;
+        font-size: 1.2em;
+        padding: 20px;
+        margin: 1% 0% 1% 3%;
+        text-align: center;
+        width: 90%;
+        justify-content: center;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav {
+        background-color: #170c93;
+        border-radius: 15px;
+        font-size: 1.2em;
+        padding: 10px 10px 10px 10px;
+        margin: 1% 0% 1% 4%;
+        text-align: center;
+        justify-content: center;
+        width: 90%;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+
+        ul {
+            list-style-type: none;
+            padding: 10px 5px 10px 5px;
+            margin: 0;
+            text-align: right;
+        }
+
+        li {
+            display: inline;
+            /* Para que los elementos se muestren en línea */
+            margin-right: 20px;
+            /* Espacio entre elementos */
+        }
+
+        a {
+            text-decoration: none;
+            /* Sin subrayado */
+            color: #fff;
+            /* Color de texto */
+            font-weight: bold;
+            /* Negrita */
+
+            &:hover {
+                color: #c1e6f0;
+                /* Cambiar el color al pasar el ratón */
+            }
+        }
+
+    }
+}
