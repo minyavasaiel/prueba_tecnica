@@ -1,0 +1,13 @@
+{% extends '.\base.html' %}
+
+{% block title %} Mostrar datos {% endblock %}
+
+{% block content %} 
+<h1>Centros</h1>
+<p>Haga click en el nombre para ver detalles.</p>
+<div class="dataDiv">
+ {% for center in centers %}
+ <a href="#"><button>{{ center.name }}</button></a>
+ {% endfor %}
+</div>
+{% endblock %}

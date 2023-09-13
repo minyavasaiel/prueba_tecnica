@@ -47,3 +47,13 @@ def read_json():
                     else:
                         newCenter = Center(name=center['name'], stories=center['stories'], organization=newOrganization)
                         newCenter.save()
+
+def listar(request):
+    #obtener todos los elementos
+    organizations = Organization.objects.all()
+    return render(request, 'listar.html', {'organizations': organizations})
+
+def listarCentros(request):
+    #obtener todos los elementos
+    centers = Center.objects.all()
+    return render(request, 'listar-centros.html', {'centers': centers})

@@ -4,11 +4,17 @@
 
 {% block content %} 
 <h1>Operaciones</h1>
-<div id="buttons">
-<button>Leer</button>
+<div class="dataDiv">
+    <a href="{% url 'listar' %}">
+<button>Organizaciones</button>
+    </a>
+    <a href="{% url 'listarCentros' %}">
+        <button>Centros</button>
+            </a>
 <button>Escribir</button>
 <button>Actualizar</button>
 <button>Borrar</button>
 </div>
 
 {% endblock %}
+        

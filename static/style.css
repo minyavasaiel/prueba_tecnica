@@ -40,7 +40,7 @@ body main form button:hover {
   color: #FFD5FF;
   transform: scale(1.1);
 }
-body main #buttons {
+body main .dataDiv {
   display: flex;
   flex-direction: column;
   background-color: #92D1C3;
@@ -52,9 +52,9 @@ body main #buttons {
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
-body main #buttons button {
+body main .dataDiv button {
   border: none;
-  width: auto;
+  width: 250px;
   margin: 2%;
   padding: 10px 15px;
   background-color: #B47EB3;
@@ -62,7 +62,7 @@ body main #buttons button {
   color: #FDF5Bf;
   font-size: 1.2em;
 }
-body main #buttons button:hover {
+body main .dataDiv button:hover {
   color: #FFD5FF;
   transform: scale(1.1);
 }

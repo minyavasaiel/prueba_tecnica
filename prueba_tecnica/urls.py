@@ -24,4 +24,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('logout/', views.logout_view, name='logout'),
     path('readjason/', views.read_json, name='read_json'),
+    path('listar/', views.listar, name= 'listar'),
+    path('listarCentros/', views.listarCentros, name= 'listarCentros'),
+
 ]
