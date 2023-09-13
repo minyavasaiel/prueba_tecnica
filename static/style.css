@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*paleta colores*/
 body {
   margin: 0;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -10,11 +11,12 @@ body main {
 }
 body main form {
   align-items: center;
-  background-color: #c1e6f0;
-  border: 1px solid #170c93;
+  background-color: #92D1C3;
+  border: 2px solid #8BB8A8;
   border-radius: 15px;
   padding: 20px 20px 20px 20px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
 }
 body main form input {
   display: block;
@@ -23,31 +25,51 @@ body main form input {
   /* Espaciado entre campos y centrado horizontalmente */
 }
 body main form button {
+  border: none;
   display: block;
   margin: 0 auto;
-  background-color: #170c93;
+  background-color: #B47EB3;
   border-radius: 15px;
-  color: #fff;
+  color: #FDF5Bf;
   font-size: 1.2em;
   padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+body main form button:hover {
+  color: #FFD5FF;
+  transform: scale(1.1);
 }
 body main #buttons {
-  background-color: #c1e6f0 !important;
+  display: flex;
+  flex-direction: column;
+  background-color: #92D1C3;
+  padding: 2% 5%;
   border-radius: 15px;
   color: #000;
-  border-color: #170c93;
+  border: 2px solid #8BB8A8;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 body main #buttons button {
-  background-color: #170c93;
+  border: none;
+  width: auto;
+  margin: 2%;
+  padding: 10px 15px;
+  background-color: #B47EB3;
   border-radius: 15px;
-  color: #fff;
+  color: #FDF5Bf;
   font-size: 1.2em;
-  padding: 10px 5px 10px 5px;
+}
+body main #buttons button:hover {
+  color: #FFD5FF;
+  transform: scale(1.1);
 }
 body .alert {
-  background-color: #170c93;
+  background-color: #B47EB3;
   border-radius: 15px;
-  color: #fff;
+  color: #FDF5Bf;
   font-size: 1.2em;
   padding: 20px;
   margin: 1% 0% 1% 3%;
@@ -57,7 +79,7 @@ body .alert {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 body nav {
-  background-color: #170c93;
+  background-color: #B47EB3;
   border-radius: 15px;
   font-size: 1.2em;
   padding: 10px 10px 10px 10px;
@@ -81,13 +103,9 @@ body nav li {
 }
 body nav a {
   text-decoration: none;
-  /* Sin subrayado */
-  color: #fff;
-  /* Color de texto */
+  color: #FDF5Bf;
   font-weight: bold;
-  /* Negrita */
 }
 body nav a:hover {
-  color: #c1e6f0;
-  /* Cambiar el color al pasar el ratón */
+  color: #FFD5FF;
 }/*# sourceMappingURL=style.css.map */

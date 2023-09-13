@@ -1,3 +1,12 @@
+/*paleta colores*/
+$africanViolet: #B47EB3;
+$lemonChiffon: #FDF5Bf;
+$mimiPink: #FFD5FF;
+$tiffanyBlue: #92D1C3;
+$cambridgeBlue: #8BB8A8;
+
+
+
 body {
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -7,17 +16,16 @@ body {
         flex-direction: column;
         align-items: center;
 
-        h1 {
-
-        }
+        h1 {}
 
         form {
             align-items: center;
-            background-color: #c1e6f0;
-            border: 1px solid #170c93;
+            background-color: $tiffanyBlue;
+            border: 2px solid $cambridgeBlue;
             border-radius: 15px;
             padding: 20px 20px 20px 20px;
             box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
 
             input {
                 display: block;
@@ -27,37 +35,61 @@ body {
             }
 
             button {
+                border: none;
                 display: block;
                 margin: 0 auto;
-                background-color: #170c93;
+                background-color: $africanViolet;
                 border-radius: 15px;
-                color: #fff;
+                color: $lemonChiffon;
                 font-size: 1.2em;
                 padding: 10px;
-               
+                cursor: pointer;
+                transition: transform 0.2s ease-in-out;
+
+                &:hover {
+                    color: $mimiPink;
+                    transform: scale(1.1); // Aumenta el tamaño del botón 
+                }
+
             }
         }
 
         #buttons {
-            background-color: #c1e6f0 !important;
+            display: flex;
+            flex-direction: column;
+            background-color: $tiffanyBlue;
+            padding: 2% 5%;
             border-radius: 15px;
             color: #000;
-            border-color: #170c93;
+            border: 2px solid $cambridgeBlue;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
 
             button {
-                background-color: #170c93;
+                border: none;
+                width: auto;
+                margin: 2%;
+                padding: 10px 15px;
+                background-color: $africanViolet;
                 border-radius: 15px;
-                color: #fff;
+                color: $lemonChiffon;
+                ;
                 font-size: 1.2em;
-                padding: 10px 5px 10px 5px;
+
+                &:hover {
+                    color: $mimiPink;
+                    transform: scale(1.1); 
+                }
             }
         }
     }
 
     .alert {
-        background-color: #170c93;
+        background-color: $africanViolet;
         border-radius: 15px;
-        color: #fff;
+        color: $lemonChiffon;
+        ;
         font-size: 1.2em;
         padding: 20px;
         margin: 1% 0% 1% 3%;
@@ -68,7 +100,7 @@ body {
     }
 
     nav {
-        background-color: #170c93;
+        background-color: $africanViolet;
         border-radius: 15px;
         font-size: 1.2em;
         padding: 10px 10px 10px 10px;
@@ -94,15 +126,11 @@ body {
 
         a {
             text-decoration: none;
-            /* Sin subrayado */
-            color: #fff;
-            /* Color de texto */
+            color: $lemonChiffon;
             font-weight: bold;
-            /* Negrita */
 
             &:hover {
-                color: #c1e6f0;
-                /* Cambiar el color al pasar el ratón */
+                color: $mimiPink;
             }
         }
 
