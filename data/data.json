@@ -1,0 +1,103 @@
+{
+  "organizations": [
+    {
+      "name": "TechCorp Solutions",
+      "contact": "John Doe",
+      "Phone": "123-456-7890",
+      "Centres": [
+        {
+          "name": "Main Campus",
+          "stories": 5
+        },
+        {
+          "name": "Downtown Branch",
+          "stories": 3
+        }
+      ]
+    },
+    {
+      "name": "EduFuture Institute",
+      "contact": "Alice Smith",
+      "Phone": "987-654-3210",
+      "Centres": [
+        {
+          "name": "North Wing",
+          "stories": 4
+        },
+        {
+          "name": "Research Facility",
+          "stories": 7
+        },
+        {
+          "name": "South Wing",
+          "stories": 3
+        }
+      ]
+    },
+    {
+      "name": "GreenLife NGO",
+      "contact": "Bob Green",
+      "Phone": "111-222-3333",
+      "Centres": [
+        {
+          "name": "Community Centre",
+          "stories": 2
+        },
+        {
+          "name": "Eco Park",
+          "stories": 1
+        },
+        {
+          "name": "Recycle Hub",
+          "stories": 2
+        },
+        {
+          "name": "Organic Farm",
+          "stories": 1
+        }
+      ]
+    },
+    {
+      "name": "HealthNow Hospitals",
+      "contact": "Clara Barton",
+      "Phone": "555-777-9999",
+      "Centres": [
+        {
+          "name": "Main Hospital",
+          "stories": 10
+        },
+        {
+          "name": "Downtown Clinic",
+          "stories": 4
+        }
+      ]
+    },
+    {
+      "name": "SpaceY Innovations",
+      "contact": "Elon Star",
+      "Phone": "444-888-6666",
+      "Centres": [
+        {
+          "name": "Launchpad A",
+          "stories": 1
+        },
+        {
+          "name": "Research Lab",
+          "stories": 2
+        },
+        {
+          "name": "Admin Building",
+          "stories": 6
+        },
+        {
+          "name": "Hangar B",
+          "stories": 1
+        },
+        {
+          "name": "Training Centre",
+          "stories": 3
+        }
+      ]
+    }
+  ]
+}

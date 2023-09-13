@@ -1,0 +1,56 @@
+main {
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    height: 100vh; /* Establecer la altura al 100% de la ventana */
+}
+
+/* Estilo básico para la barra de navegación */
+nav {
+    background-color: #170c93; /* Color de fondo de la barra de navegación */
+    height: 10%;
+    border-radius: 15px;
+    font-size: 1.2em;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Estilo para la lista no ordenada */
+nav ul {
+    list-style-type: none;
+    padding: 10px 5px 10px 5px;
+    margin: 0;
+    text-align: right; /* Alinea el texto a la derecha */
+}
+
+/* Estilo para los elementos de la lista */
+nav li {
+    display: inline; /* Para que los elementos se muestren en línea */
+    margin-right: 20px; /* Espacio entre elementos */
+}
+
+/* Estilo para los enlaces */
+nav a {
+    text-decoration: none; /* Sin subrayado */
+    color: #fff; /* Color de texto */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilo para los enlaces al pasar el ratón por encima */
+nav a:hover {
+    color: #c1e6f0; /* Cambiar el color al pasar el ratón */
+}
+
+.alert {
+    background-color: #170c93; /* Color de fondo de la alerta */
+    border-radius: 15px;
+    color: #fff; /* Color de texto */
+    font-size: 1.2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 5px 10px 5px;
+    margin: 0;
+    text-align: center; /* Alinea el texto al centro */
+    width: 100%;
+    justify-content: center;
+}

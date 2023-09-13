@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang='es'>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-COmpatible" content="IE=edge">
+		<meta name="viewpoint" content="width=device-with, initial-scale=1.0">
+		<link rel="stylesheet" href="{% static 'style.css' %}">
+		<title>{% block title %}{% endblock %}</title>
+	</head>
+	<body>
+		{% if user.is_authenticated %}
+		<nav>
+			<ul>
+                <li><a href="{% url 'logout' %}">Salir</a></li>
+            </ul>
+		</nav>
+		{% else %}
+		<p class="alert">Inicia sesión para poder trabajar.</p>
+		{% endif %}
+		<main>
+            {% block content %}
+      
+            {% endblock %}
+          </main>
+		
+
+	</body>
+</html>
