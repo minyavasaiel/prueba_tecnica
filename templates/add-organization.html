@@ -1,0 +1,28 @@
+{% extends '.\base.html' %}
+
+{% block title %}
+  Añadir organización
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  <h1>Detalles de la organización</h1>
+
+  <div class="dataDiv">
+    <form class="details" method="post" action="{% url 'added-organization' %}">
+      {% csrf_token %}
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" />
+
+      <label for="contact">Contacto:</label>
+      <input type="text" id="contact" name="contact"  />
+
+      <label for="phone">Teléfono:</label>
+      <input type="text" id="phone" name="phone"  />
+
+      
+      <button type="submit" id="actualizar-btn">Añadir</button>
+    </form>
+  </div>
+  {% endif %}
+{% endblock %}

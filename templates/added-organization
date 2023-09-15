@@ -1,0 +1,13 @@
+{% extends '.\base.html' %}
+
+{% block title %} Agregada organización {% endblock %}
+
+{% block content %} 
+{% if user.is_authenticated %}
+<div class="dataDiv">
+    <p>Datos añadidos.</p>
+    <p>Contacto: {{newOrganization.contact}}</p>
+    <p>Teléfono: {{newOrganization.phone}}</p>
+   </div>
+{% endif%}
+{% endblock %}

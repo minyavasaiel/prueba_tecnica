@@ -54,7 +54,7 @@ body {
             }
         }
 
-        #buttons {
+        .dataDiv {
             display: flex;
             flex-direction: column;
             background-color: $tiffanyBlue;
@@ -68,7 +68,7 @@ body {
 
             button {
                 border: none;
-                width: auto;
+                width: 250px;
                 margin: 2%;
                 padding: 10px 15px;
                 background-color: $africanViolet;
@@ -79,8 +79,36 @@ body {
 
                 &:hover {
                     color: $mimiPink;
-                    transform: scale(1.1); 
+                    transform: scale(1.1);
                 }
+            }
+
+            .details {
+                border: none;
+                background-color: none;
+                box-shadow: none;
+
+                select {
+                    margin-top: 10px;
+                    margin-left: 14%;
+                    min-width: 180px;
+                }
+
+                button {
+                    margin-top: 25px;
+                }
+            }
+
+            .badd {
+                margin-top: 25px;
+                border: 2px solid #000;
+                box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .form2 {
+                border: none;
+                box-shadow: none;
+                margin: 0px;
             }
         }
     }

@@ -1,0 +1,18 @@
+{% extends '.\base.html' %}
+
+{% block title %} Mostrar datos {% endblock %}
+
+{% block content %} 
+{% if user.is_authenticated %}
+<h1>Centros</h1>
+<p>Haga click en el nombre para ver detalles.</p>
+<div class="dataDiv">
+ {% for center in centers %}
+ <a href="{% url 'detail-center' id=center.id %}"><button>{{ center.name }}</button></a>
+ {% endfor %}
+ <a href="{% url 'add-center' %}">
+    <button type="button" class="badd">Añadir centro</button>
+</a>
+</div>
+{% endif %}
+{% endblock %}

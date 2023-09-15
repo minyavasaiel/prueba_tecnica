@@ -1,0 +1,14 @@
+{% extends '.\base.html' %}
+
+{% block title %} Agregado centro {% endblock %}
+
+{% block content %} 
+{% if user.is_authenticated %}
+<div class="dataDiv">
+    <p>Datos añadidos.</p>
+    <p>Nombre: {{newCenter.name}}</p>
+    <p>Stories: {{newCenter.stories}}</p>
+    <p>Organización: {{newCenter.organization.name}}</p>
+   </div>
+{% endif%}
+{% endblock %}

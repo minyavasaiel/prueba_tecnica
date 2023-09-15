@@ -24,4 +24,17 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('logout/', views.logout_view, name='logout'),
     path('readjason/', views.read_json, name='read_json'),
+    path('organizations-list/', views.listar, name= 'organizations-list'),
+    path('centers-list/', views.listarCentros, name= 'centers-list'),
+    path('add-organization/', views.add_organization, name= 'add-organization'),
+    path('add-center/', views.add_center, name= 'add-center'),
+    path('added-organization/', views.added_organization, name= 'added-organization'),
+    path('added-center/', views.added_center, name= 'added-center'),
+    path('detail-organization/<int:id>/', views.detail_organization, name= 'detail-organization'),
+    path('detail-center/<int:id>/', views.detail_center, name= 'detail-center'),
+    path('updated-organization/<int:id>/', views.updated_organization, name= 'updated-organization'),
+    path('updated-center/<int:id>/', views.updated, name= 'updated-center'),
+    path('delete-organization/<int:id>/', views.delete_organization, name= 'delete-organization'),
+    path('delete-center/<int:id>/', views.delete_center, name= 'delete-center'),
+
 ]
