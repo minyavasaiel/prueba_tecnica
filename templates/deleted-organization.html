@@ -1,0 +1,17 @@
+{% extends '.\base.html' %}
+
+{% block title %}
+  Organización borrada
+{% endblock %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <h1>La organización ha sido borrada correctamente</h1>
+    <div class="dataDiv">
+      <p>Datos borrados.</p>
+      <p>Nombre: {{ organization.name }}</p>
+      <p>Contacto: {{ organization.contact }}</p>
+      <p>Teléfono: {{ organization.phone }}</p>
+    </div>
+  {% endif %}
+{% endblock %}

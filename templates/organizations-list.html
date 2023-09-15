@@ -8,8 +8,11 @@
 <p>Haga click en el nombre para ver detalles.</p>
 <div class="dataDiv">
  {% for organization in organizations %}
- <a href="#"><button>{{ organization.name }}</button></a>
+ <a href="{% url 'detail-organization' id=organization.id %}"><button>{{ organization.name }}</button></a>
  {% endfor %}
+ <a href="{% url 'add-organization' %}">
+    <button type="button" class="badd">Añadir organización</button>
+</a>
 </div>
 {% endif %}
 {% endblock %}

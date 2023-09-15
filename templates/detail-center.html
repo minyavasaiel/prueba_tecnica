@@ -9,7 +9,7 @@
   <h1>Detalle del centro {{ center.name }}</h1>
 
   <div class="dataDiv">
-    <form class="details" method="post" action="{% url 'updated' id=center.id %}">
+    <form class="details" method="post" action="{% url 'updated-center' id=center.id %}">
       {% csrf_token %}
       <label for="name">Nombre:</label>
       <input type="text" id="name" name="name" value="{{ center.name }}"  />
