@@ -12,11 +12,15 @@
 		{% if user.is_authenticated %}
 		<nav>
 			<ul>
-                <li><a href="{% url 'logout' %}">Salir</a></li>
+				<li><a onclick="goBack()">Volver</a></li>
+				<li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
             </ul>
 		</nav>
 		{% else %}
-		<div class="alert"><p>Inicia sesión para poder usar la aplicación.</p></div>
+		<div class="alert"><p>Inicia sesión para poder usar la aplicación.</p>
+		<a href="{% url 'index' %}">Iniciar sesión</a>
+		</div>
 		{% endif %}
 		<main>
             {% block content %}
@@ -24,6 +28,10 @@
             {% endblock %}
           </main>
 		
-
+<script type="text/javascript">
+	function goBack() {
+        window.history.back();
+    }
+</script>
 	</body>
 </html>

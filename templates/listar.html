@@ -3,6 +3,7 @@
 {% block title %} Mostrar datos {% endblock %}
 
 {% block content %} 
+{% if user.is_authenticated %}
 <h1>Organizaciones</h1>
 <p>Haga click en el nombre para ver detalles.</p>
 <div class="dataDiv">
@@ -10,4 +11,5 @@
  <a href="#"><button>{{ organization.name }}</button></a>
  {% endfor %}
 </div>
+{% endif %}
 {% endblock %}

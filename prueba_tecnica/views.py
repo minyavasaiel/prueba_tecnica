@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from .models import Organization, Center
+from django.contrib.auth.decorators import login_required
 import json
 
 @login_required
@@ -54,6 +55,48 @@ def listar(request):
     return render(request, 'listar.html', {'organizations': organizations})
 
 def listarCentros(request):
-    #obtener todos los elementos
     centers = Center.objects.all()
-    return render(request, 'listar-centros.html', {'centers': centers})
+    return render(request, 'centers-list.html', {'centers': centers})
+
+def add_center(request):
+    organizations = Organization.objects.all()
+    return render(request, 'add-center.html', {'organizations': organizations})
+
+def added_center(request):
+    if request.method != 'POST':
+        return HttpResponse('Error')
+    name = request.POST['name']
+    stories = request.POST['stories']
+    idOrganization= request.POST['centerOrganization']
+    organization = Organization.objects.get(pk=idOrganization)
+    newCenter = Center(name=name, stories=stories, organization=organization)
+    newCenter.save()
+    return HttpResponse("Centro agregado correctamente")
+
+def detail_center(request, id):
+    center = Center.objects.get(pk=id)
+    organizations = Organization.objects.all()
+    return render(request, 'detail-center.html', {'center': center, 'organizations': organizations})
+
+def updated(request, id):
+    if request.method != 'POST':
+        return HttpResponse('Error')
+    center = Center.objects.get(pk=id)
+    center.name = request.POST['name']
+    center.stories = request.POST['stories']
+
+    #organización
+    idOrganization= request.POST['centerOrganization']
+    newOrganization = Organization.objects.get(pk=idOrganization)
+    center.organization = newOrganization
+    center.save()
+    return render(request, 'updated.html', {'center': center, 'newOrganization': newOrganization})
+
+@login_required     #para evitar que borren sin estar logueados, poniendo la url
+def delete_center(request, id):
+    center = Center.objects.get(pk=id)
+    center.delete()
+    return render(request, 'deleted-center.html', {'center': center})
+        
+    
+  

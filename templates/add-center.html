@@ -1,0 +1,30 @@
+{% extends '.\base.html' %}
+
+{% block title %}
+  Añadir centro
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  <h1>Detalles del centro</h1>
+
+  <div class="dataDiv">
+    <form class="details" method="post" action="{% url 'added-center' %}">
+      {% csrf_token %}
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" />
+
+      <label for="stories">Historias:</label>
+      <input type="number" id="stories" name="stories"  />
+
+      <label for="centerOrganization">Organización:</label>
+      <select id="centerOrganization" name="centerOrganization">
+        {% for organization in organizations %}
+            <option value="{{ organization.id }}">{{ organization.name }}</option>
+        {% endfor %}
+      </select>
+      <button type="submit" id="actualizar-btn">Añadir</button>
+    </form>
+  </div>
+  {% endif %}
+{% endblock %}

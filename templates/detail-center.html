@@ -1,0 +1,41 @@
+{% extends '.\base.html' %}
+
+{% block title %}
+  Detalle Centro
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  <h1>Detalle del centro {{ center.name }}</h1>
+
+  <div class="dataDiv">
+    <form class="details" method="post" action="{% url 'updated' id=center.id %}">
+      {% csrf_token %}
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" value="{{ center.name }}"  />
+
+      <label for="stories">Historias:</label>
+      <input type="number" id="stories" name="stories" value="{{ center.stories }}"  />
+
+      <label for="centerOrganization">Organización:</label>
+    </br>
+      <select id="centerOrganization" name="centerOrganization">
+        {% for organization in organizations %}
+          {% if organization.id == center.organization.id %}
+            <option value="{{ organization.id }}" selected>{{ organization.name }}</option>
+          {% else %}
+            <option value="{{ organization.id }}">{{ organization.name }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+      <button type="submit" >Actualizar</button>
+    </form>
+    <form class="form2" method="post" action="{% url 'delete-center' center.id %}">
+      {% csrf_token %}
+      <button type="submit">Borrar</button>
+    </form>
+   
+  </div>
+  {% endif %}
+{% endblock %}
+

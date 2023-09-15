@@ -66,6 +66,29 @@ body main .dataDiv button:hover {
   color: #FFD5FF;
   transform: scale(1.1);
 }
+body main .dataDiv .details {
+  border: none;
+  background-color: none;
+  box-shadow: none;
+}
+body main .dataDiv .details select {
+  margin-top: 10px;
+  margin-left: 14%;
+  min-width: 180px;
+}
+body main .dataDiv .details button {
+  margin-top: 25px;
+}
+body main .dataDiv .badd {
+  margin-top: 25px;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+body main .dataDiv .form2 {
+  border: none;
+  box-shadow: none;
+  margin: 0px;
+}
 body .alert {
   background-color: #B47EB3;
   border-radius: 15px;

@@ -25,6 +25,11 @@ urlpatterns = [
     path('logout/', views.logout_view, name='logout'),
     path('readjason/', views.read_json, name='read_json'),
     path('listar/', views.listar, name= 'listar'),
-    path('listarCentros/', views.listarCentros, name= 'listarCentros'),
+    path('centers-list/', views.listarCentros, name= 'centers-list'),
+    path('add-center/', views.add_center, name= 'add-center'),
+    path('added-center/', views.added_center, name= 'added-center'),
+    path('detail-center/<int:id>/', views.detail_center, name= 'detail-center'),
+    path('updated-center/<int:id>/', views.updated, name= 'updated'),
+    path('delete-center/<int:id>/', views.delete_center, name= 'delete-center'),
 
 ]

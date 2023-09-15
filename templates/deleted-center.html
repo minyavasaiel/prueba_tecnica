@@ -1,0 +1,17 @@
+{% extends '.\base.html' %}
+
+{% block title %}
+  Centro borrado
+{% endblock %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <h1>El centro ha sido borrado correctamente</h1>
+    <div class="dataDiv">
+      <p>Datos borrados.</p>
+      <p>Nombre: {{ center.name }}</p>
+      <p>Stories: {{ center.stories }}</p>
+      <p>newOrganization: {{ center.organization.name }}</p>
+    </div>
+  {% endif %}
+{% endblock %}

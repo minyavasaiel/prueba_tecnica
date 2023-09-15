@@ -3,18 +3,16 @@
 {% block title %} CRUD {% endblock %}
 
 {% block content %} 
+{% if user.is_authenticated %}
 <h1>Operaciones</h1>
 <div class="dataDiv">
     <a href="{% url 'listar' %}">
 <button>Organizaciones</button>
     </a>
-    <a href="{% url 'listarCentros' %}">
+    <a href="{% url 'centers-list' %}">
         <button>Centros</button>
             </a>
-<button>Escribir</button>
-<button>Actualizar</button>
-<button>Borrar</button>
 </div>
-
+{% endif %}
 {% endblock %}
         

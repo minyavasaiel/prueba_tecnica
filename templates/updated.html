@@ -1,0 +1,14 @@
+{% extends '.\base.html' %}
+
+{% block title %} Actualizado {% endblock %}
+
+{% block content %} 
+{% if user.is_authenticated %}
+<div class="dataDiv">
+ <p>Datos actualizados.</p>
+ <p>Nombre: {{center.name}}</p>
+ <p>Stories: {{center.stories}}</p>
+ <p>newOrganization: {{newOrganization}}</p>
+</div>
+{% endif %}
+{% endblock %}
