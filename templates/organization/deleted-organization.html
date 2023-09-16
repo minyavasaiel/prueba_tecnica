@@ -13,5 +13,10 @@
       <p>Contacto: {{ organization.contact }}</p>
       <p>Teléfono: {{ organization.phone }}</p>
     </div>
+  {% else %}
+    <div class="alert">
+      <p>Inicia sesión para poder usar la aplicación.</p>
+      <a href="{% url 'index' %}">Iniciar sesión</a>
+    </div>
   {% endif %}
 {% endblock %}

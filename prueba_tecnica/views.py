@@ -52,18 +52,18 @@ def read_json():
 def listar(request):
     #obtener todos los elementos
     organizations = Organization.objects.all()
-    return render(request, 'organizations-list.html', {'organizations': organizations})
+    return render(request, 'organization/organizations-list.html', {'organizations': organizations})
 
 def listarCentros(request):
     centers = Center.objects.all()
-    return render(request, 'centers-list.html', {'centers': centers})
+    return render(request, 'center/centers-list.html', {'centers': centers})
 
 def add_center(request):
     organizations = Organization.objects.all()
-    return render(request, 'add-center.html', {'organizations': organizations})
+    return render(request, 'center/add-center.html', {'organizations': organizations})
 
 def add_organization(request):
-    return render(request, 'add-organization.html', {})
+    return render(request, 'organization/add-organization.html', {})
 
 def added_center(request):
     if request.method != 'POST':
@@ -89,11 +89,11 @@ def added_organization(request):
 def detail_center(request, id):
     center = Center.objects.get(pk=id)
     organizations = Organization.objects.all()
-    return render(request, 'detail-center.html', {'center': center, 'organizations': organizations})
+    return render(request, 'center/detail-center.html', {'center': center, 'organizations': organizations})
 
 def detail_organization(request, id):
     organization = Organization.objects.get(pk=id)
-    return render(request, 'detail-organization.html', {'organization': organization})
+    return render(request, 'organization/detail-organization.html', {'organization': organization})
 
 def updated(request, id):
     if request.method != 'POST':
@@ -107,7 +107,7 @@ def updated(request, id):
     newOrganization = Organization.objects.get(pk=idOrganization)
     center.organization = newOrganization
     center.save()
-    return render(request, 'updated-center.html', {'center': center, 'newOrganization': newOrganization})
+    return render(request, 'center/updated-center.html', {'center': center, 'newOrganization': newOrganization})
 
 def updated_organization(request, id):
     if request.method != 'POST':
@@ -117,19 +117,19 @@ def updated_organization(request, id):
     organization.contact = request.POST['contact']
     organization.phone = request.POST['phone']
     organization.save()
-    return render(request, 'updated-organization.html', {'organization': organization})
+    return render(request, 'organization/updated-organization.html', {'organization': organization})
 
 @login_required     #para evitar que borren sin estar logueados, poniendo la url
 def delete_center(request, id):
     center = Center.objects.get(pk=id)
     center.delete()
-    return render(request, 'deleted-center.html', {'center': center})
+    return render(request, 'center/deleted-center.html', {'center': center})
 
 @login_required     #para evitar que borren sin estar logueados, poniendo la url
 def delete_organization(request, id):
     organization = Organization.objects.get(pk=id)
     organization.delete()
-    return render(request, 'deleted-organization.html', {'organization': organization})
+    return render(request, 'organization/deleted-organization.html', {'organization': organization})
         
     
   

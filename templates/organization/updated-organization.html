@@ -1,0 +1,21 @@
+{% extends '.\base.html' %}
+
+{% block title %}
+  Actualizada organización
+{% endblock %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <div class="dataDiv">
+      <p>Organización actualizada</p>
+      <p>Nombre: {{ organization.name }}</p>
+      <p>Contacto: {{ organization.contact }}</p>
+      <p>Teléfono: {{ organization.phone }}</p>
+    </div>
+  {% endif %}
+  {% else %}
+  <div class="alert">
+    <p>Inicia sesión para poder usar la aplicación.</p>
+    <a href="{% url 'index' %}">Iniciar sesión</a>
+  </div>
+{% endblock %}

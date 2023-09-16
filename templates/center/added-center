@@ -10,5 +10,9 @@
     <p>Stories: {{newCenter.stories}}</p>
     <p>Organización: {{newCenter.organization.name}}</p>
    </div>
+   {% else %}
+		<div class="alert"><p>Inicia sesión para poder usar la aplicación.</p>
+		<a href="{% url 'index' %}">Iniciar sesión</a>
+		</div>
 {% endif%}
 {% endblock %}
